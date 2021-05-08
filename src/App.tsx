@@ -1,9 +1,15 @@
+// eslint-disable-next-line no-use-before-define
 import React from 'react';
+import RecipeApp from './components/RecipeApp'
+import './bootstrap.css';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <h1>Hello React!</h1>
-  );
-}
+    <div className='App'>
+      <RecipeApp />
+    </div>
+  )
+};
 
 export default App;
