@@ -5,6 +5,7 @@ import Header from "./util/Header";
 import Footer from "./util/Footer";
 import Home from "./home/Home";
 import RecipeList from './list/RecipeList'
+import Post from './post/Post'
 import { Route, Switch } from "react-router";
 
 const RecipeApp = () => {
@@ -15,6 +16,7 @@ const RecipeApp = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/recipes" component={RecipeList} />
+            <Route path="/post" component={Post} />
           </Switch>
         <Footer />
       </Router>
