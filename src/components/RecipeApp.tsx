@@ -14,7 +14,7 @@ const RecipeApp = () => {
       <Router>
         <Header />
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Home}/>
             <Route path="/recipes" component={RecipeList} />
             <Route path="/post" component={Post} />
           </Switch>

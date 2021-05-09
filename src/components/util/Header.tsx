@@ -7,9 +7,9 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div>
-          <a href="http://www.tkhn0625.com" className="navbar-brand">
-            tkhn0625
-          </a>
+        <Link className="navbar-brand" to="/">
+          Home
+        </Link>
         </div>
         <ul className="navbar-nav">
           {

@@ -13,6 +13,24 @@
   color: white;
 }
 
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* 要素をflexboxに対応させる */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: center; /* 横方向の中央揃え */
+  flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
+}
+
+footer{
+  position: fixed;
+  width:100%;
+  height:56px;
+  bottom:0;
+  text-align:center;
+  z-index: 1000;
+}
+
 .App-link {
   color: #61dafb;
 }
