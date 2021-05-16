@@ -1,0 +1,14 @@
+[Unit]
+Description=recipe web application frontend
+After=network.target
+
+[Service]
+# EnvironmentFile=/etc/params
+WorkingDirectory=/opt/recipe-frontend
+ExecStart=/usr/bin/yarn start
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=on-failure
+
+[Install]
+RequiredBy=network.target
+WantedBy=multi-user.target
