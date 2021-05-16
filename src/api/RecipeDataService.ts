@@ -1,5 +1,5 @@
-import axios,{AxiosError} from 'axios'
-import {API_URL} from '../Constants'
+import axios, { AxiosError } from 'axios';
+import { API_URL } from '../Constants';
 
 // class RecipeDataService{
 //     retrieveAllRecipes=()=>{
@@ -12,19 +12,23 @@ import {API_URL} from '../Constants'
 // }
 
 // export default new RecipeDataService();
-interface IRecipe{
-  recipes: Array<Recipes>
+interface IRecipe {
+  recipes: Array<Recipes>;
 }
 
 // レスポンスの型定義。
 interface IResponse {
-    data: IRecipe;
-    error: AxiosError;
-    loading: boolean;
+  data: IRecipe;
+  error: AxiosError;
+  loading: boolean;
 }
 
-export const retrieveAllRecipes = async ():Promise<IRecipe> =>{
-  const res = await axios.get<IRecipe>(`${API_URL}/recipes/list`);
-  const data = res.data
-  return data;
-}
+export const retrieveAllRecipes = async (): Promise<IRecipe> => {
+  try {
+    const res = await axios.get<IRecipe>(`${API_URL}/recipes/list`);
+    const data = res.data;
+    return data;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
