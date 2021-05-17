@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { API_URL } from '../Constants';
+import config from '../config';
 
 // class RecipeDataService{
 //     retrieveAllRecipes=()=>{
@@ -25,7 +25,7 @@ interface IResponse {
 
 export const retrieveAllRecipes = async (): Promise<IRecipe> => {
   try {
-    const res = await axios.get<IRecipe>(`${API_URL}/recipes/list`);
+    const res = await axios.get<IRecipe>(`${config.apiUrl}/recipes/list`);
     const data = res.data;
     return data;
   } catch (error) {
